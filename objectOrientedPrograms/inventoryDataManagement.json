@@ -1,0 +1,39 @@
+{
+    "rice": [
+        {
+            "name": "Sonamasuri",
+            "weight": 10,
+            "price": 10
+        },
+        {
+            "name": "Parimal",
+            "weight": 20,
+            "price": 20
+            
+        }
+    ],
+    "pulses": [
+        {
+            "name": "Lentil",
+            "weight": 30,
+            "price": 30
+        },
+        {
+            "name": "ChickPea",
+            "weight": 40,
+            "price": 40
+        }
+    ],
+    "wheat": [
+        {
+            "name": "W1",
+            "weight": 50,
+            "price": 50
+        },
+        {
+            "name": "W2",
+            "weight": 60,
+            "price": 60
+        }
+    ]
+}
