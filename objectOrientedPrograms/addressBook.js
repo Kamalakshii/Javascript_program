@@ -2,7 +2,7 @@
  *  Execution       : Default node         cmd> node fileName.js                 
  *  Purpose         :To design and maintain an address book
  *  @description    
- *  @file           :AddressBook.js
+ *  @file           :addressBook.js
  *  @overview       :used to maintain an address book. An address book holds a collection 
                      entries, each recording a person's first and last names, address, city,
                      state, zip, and phone number.
@@ -13,7 +13,7 @@
 /** 
  * to access data from utility file
  */
-var M = require('../Utility/Address')
+var M = require('../Utility/address')
 var file = require('fs');
 var data1 = file.readFileSync('s.json','utf8');
 var data = JSON.parse(data1);

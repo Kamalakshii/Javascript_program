@@ -2,7 +2,7 @@
  *  Execution       : Default node         cmd> node fileName.js                 
  *  Purpose         : To maintain the Stock Symbol Purchased or Sold in a Stack
                       implemented using linked list 
- *  @file           :CompanySharesStack.js
+ *  @file           :companySharesStack.js
  *  @overview       :maintain the Stock Symbol Purchased or Sold in a Stack implemented 
                     using Linked List to indicate transactions done.
  *  @author         : KAMALAKSHI SWAMY   <swamykamalakshi103@gmail.com>
@@ -14,7 +14,7 @@
  */
 var file = require("fs");
 var readline = require("readline-sync");
-var utility = require("../Utility/CompanySharesStackUtil");
+var utility = require("../Utility/companySharesStackUtil");
 function main() {
   try {
     /**

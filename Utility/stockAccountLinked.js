@@ -3,7 +3,7 @@
  */
 var read = require('readline-sync');
 var file = require('fs');
-var  M = require('../Utility/utilityDataStructure');
+var  M = require('./utilityDataStructure');
 var linkedlist = new M.LinkedList();
 var s = 0;
 class StockAccountLinked

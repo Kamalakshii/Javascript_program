@@ -2,7 +2,7 @@
  *  Execution       : Default node         cmd> node fileName.js                 
  *  Purpose         :To maintain the List of CompanyShares in a Linked List
  *  @description    
- *  @file           :CompanyShares.js
+ *  @file           :companyShares.js
  *  @overview       :Maintain the List of CompanyShares in a Linked List So new CompanyShares 
                     can be added or removed easily.
  *  @author         : KAMALAKSHI SWAMY   <swamykamalakshi103@gmail.com>

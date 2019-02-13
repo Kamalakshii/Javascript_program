@@ -3,7 +3,7 @@
  */
 var read = require("readline-sync");
 var file = require("fs");
-var accessDs = require("../Utility/utilityDataStructure");
+var accessDs = require("./utilityDataStructure");
 class companySharesStack {
   constructor() {
     this.stack = new accessDs.StackLinkedList();

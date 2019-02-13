@@ -4,7 +4,7 @@
  */
 var read = require('readline-sync');
 var file = require('fs');
-var  M = require('../Utility/utilityDataStructure');
+var  M = require('./utilityDataStructure');
 var s = 0;
 class StockAccount
 {

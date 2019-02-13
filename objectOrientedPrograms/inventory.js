@@ -1,7 +1,8 @@
+
 /******************************************************************************
  *  Execution       : Default node         cmd> node fileName.js                 
  *  Purpose         :To manage data inventory of rice, wheat and pulses
- *  @file           :Inventory.js
+ *  @file           :inventory.js
  *  @overview       :Create a JSON file having Inventory Details for Rice, Pulses and
                      Wheats with properties name, weight, price per kg
  *  @author         : KAMALAKSHI SWAMY   <swamykamalakshi103@gmail.com>
