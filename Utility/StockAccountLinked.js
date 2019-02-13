@@ -1,3 +1,6 @@
+/** 
+ * to read data from the file
+ */
 var read = require('readline-sync');
 var file = require('fs');
 var  M = require('../Utility/utilityDataStructure');
@@ -9,6 +12,9 @@ class StockAccountLinked
     {
 
     }
+    /** 
+     * to create the a stock account
+     */
     stockCreate(data)
     {
         var name1 = read.question("enter the name : ");
@@ -22,7 +28,9 @@ class StockAccountLinked
             } 
         )
        console.log(data.customer);
-        
+        /** 
+         * to write into customer.json file
+         */
         var d = file.writeFileSync('customer.json',JSON.stringify(data));
     }
     /** 
@@ -31,6 +39,9 @@ class StockAccountLinked
     buy(data,data1)
     {
         console.log(data);
+        /** 
+         * creating an object of customer
+        */
         var object = data.customer;
         var id1 = read.question("enter the id :");
         for(let i in object)
@@ -39,8 +50,14 @@ class StockAccountLinked
             {
                 var index = data.customer.indexOf(data.customer[i]);
                 var customername = object[i].name;
+                /** 
+                 * to display company information
+                 */
                 console.log("company information");
                 console.log(data1);
+                /** 
+                 * ask the user to enter the company name to where he want to sell shares
+                 */
                 var name1 = read.question("enter name of company share you want to buy")
                 var object1 = data1.company;
                 for(let i in object1)
@@ -53,14 +70,18 @@ class StockAccountLinked
                         var number = read.questionInt("enter the number of shares you want to buy");
                         var s = "customer name :"+customername+ "and name of company "+name10+"buy number of shares "+number;
                         console.log(s);
-                       
-                     //   this.stackps(s);
+                       /** 
+                         * creating a date object to print the time of selling shares
+                         */
                         var time = new Date();
-                        var time1 = "time of buying the share is "+time;
-                        this.queuetime(time1);
+                        console.log("time of buying the share is "+time);
                         var n = parseInt(data.customer[index].share)
                         var n11 = parseInt(data1.company[i].share)
                         var num = parseInt(number);
+                        /** 
+                         * if the customer is selling the shares then increment the companys shares ,
+                         * and decrement the customer shares 
+                         */
                         var n1 = n + num;
                         var n2 = n11 - num;
                         if(n11 > num )
@@ -68,15 +89,16 @@ class StockAccountLinked
                             data.customer[index].share = n1;
                             data1.company[i].share = n2;
                             var d = file.writeFileSync('customer.json',JSON.stringify(data));
-                            //console.log(d) 
-                
-                            var d1 = file.writeFileSync('company.json',JSON.stringify(data1));
+                            var d1 = file.writeFileSync('Company.json',JSON.stringify(data1));
                         }
                     }
                 }
             }
         } 
     }
+    /** 
+     * to sell the shares
+     */
     sell(data , data1)
     {
         console.log(data);
@@ -90,6 +112,9 @@ class StockAccountLinked
                 var customername1 = object[i].name;
                 console.log("company information");
                 console.log(data1);
+                /** 
+                 * ask the user to enter the company name from where he want to buy shares
+                 */
                 var name1 = read.question("enter name of company you want to sell");
                 var object1 = data1.company;
                 for(let i in object1)
@@ -102,36 +127,36 @@ class StockAccountLinked
                         var number = read.questionInt("enter how many shares you want to sell");
                         var s = "customer name :"+customername1+ "and name of company "+name11+"sell number of shares "+number;
                         console.log(s);
-                       // this.stackps(s);
+                        /** 
+                         * creating a date object to print the time of buying shares
+                         */
+    
                         var time = new Date();
-                        var time1 = "time of selling the share is "+time;
-                        this.queuetime(time1);
+                        console.log("time of selling the share is "+time);
                         var n = parseInt(data.customer[index].share)
                         var n11 = parseInt(data1.company[i].share)
                         var num = parseInt(number);
+                        /** 
+                         * if the customer is buying the shares then decrement the companys shares ,
+                         * and increment the customer shares 
+                         */
                         var n1 = n - num;
                         var n2 = n11 + num;
                         data.customer[index].share = n1;
                         data1.company[i].share = n2;
+                        /** 
+                         * to write customer and company information into their respective json files
+                         */
                         var d = file.writeFileSync('customer.json',JSON.stringify(data));
-                        var d1 = file.writeFileSync('company.json',JSON.stringify(data1));
+                        var d1 = file.writeFileSync('Company.json',JSON.stringify(data1));
                     }
                 }
             }
         }
     }
-  /**   stackps(s)
-    {
-        var stack = M.StackLinkedList;
-        stack.push(s);
-        stack.print();
-    }*/
-    queuetime(time)
-    {
-        var queue = M.LinkedList
-        queue.add(time);
-        queue.printList();
-    }
+  /** 
+    * function to print the data
+   */
     print(data , data1)
     {
         console.log("customer shares information :");

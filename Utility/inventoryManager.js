@@ -10,6 +10,9 @@ class InventoryManager
     {
 
     }
+    /** 
+     * to add data to the file
+     */
     add(data)
     {
         var name =read.question("enter name of the stock");
@@ -22,6 +25,9 @@ class InventoryManager
         })
         var d = file.writeFileSync('Stock.json', JSON.stringify(data))
     }
+    /** 
+     * to remove data from the file
+     */
     remove(data)
     {
         var name = read.question("enter the name to be removed");
@@ -35,6 +41,9 @@ class InventoryManager
             var d = file.writeFileSync('Stock.json', JSON.stringify(data))
         }
     }
+    /** 
+     * to print the data
+     */
     print(data) {
         var stock = data.Stock
         for (const key in stock) {

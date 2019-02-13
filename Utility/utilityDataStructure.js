@@ -192,8 +192,6 @@ class LinkedList {
     }
     return -1;
   }
-
-      
 printShares() {
     var arr = [];
     if (this.head == null) {

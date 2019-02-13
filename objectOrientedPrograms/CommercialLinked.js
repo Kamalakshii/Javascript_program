@@ -1,3 +1,18 @@
+/******************************************************************************
+ *  Execution       : Default node         cmd> node fileName.js                 
+ *  Purpose         :To keep track of customer information
+ *  @description    
+ *  @file           :Commercial.js
+ *  @overview       :The StockAccount class also maintains a list of CompanyShares object
+                     which has Stock Symbol and Number of Shares as well as DateTime of the
+                     transaction
+ *  @author         : KAMALAKSHI SWAMY   <swamykamalakshi103@gmail.com>
+ *  @version        : 1.0.
+ *  @since          : 12/01/2019
+ ******************************************************************************/
+/** 
+ * to access data from utility file
+ */
 var D = require('../Utility/StockAccountLinked')
 var read = require('readline-sync')
 var file = require('fs')

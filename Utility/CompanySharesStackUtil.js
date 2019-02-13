@@ -1,3 +1,6 @@
+/** 
+ * to access data from the utility file
+ */
 var read = require("readline-sync");
 var file = require("fs");
 var accessDs = require("../Utility/utilityDataStructure");
@@ -12,7 +15,6 @@ class companySharesStack {
         file.readFileSync("CompanySharesStack.json")
       );
       console.log(data);
-      
       for (let j = 0; j < data.company.length; j++) {
         this.stack.push(data.company[j]);
       }
@@ -40,7 +42,6 @@ class companySharesStack {
     } while (!flag);
     var share = read.questionInt("Enter the share :");
     var price = read.questionInt("Enter the price :");
-
     /**
      * Access all the data provided by user and add push it to the stack
      */
@@ -55,7 +56,6 @@ class companySharesStack {
      */
     console.log("Elements after adding to the list :");
     console.log(this.stack.printShares());
-    
   }
   removeFromList() {
     /**

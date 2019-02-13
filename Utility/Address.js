@@ -19,6 +19,9 @@ class AddressBook
     {
 
     }
+    /** 
+     * to display the content of operations of addressbook
+     */
     address(data)
     {
         console.log("Enter 1 for add person information")
@@ -27,6 +30,9 @@ class AddressBook
         console.log("Enter 4 for sort the addressbook based on ZIP")
         console.log("Enter 5 for sort the addressbook based on firstname")
         console.log("Enter 6 for Print all addressbook information")
+        /** 
+         * ask the user to input  number
+         */
         var num = read.questionInt("Select  any number:")
         switch (num) {
             case 1: this.addPerson(data)
@@ -41,19 +47,26 @@ class AddressBook
                 break;
             case 6: this.printadd(data)
                 break;
-
         }
- 
+
     } 
+    /** 
+     * a function to add person information fname,lname,city,state,zip
+     */
     addPerson(data)
     {
-        
+        /** 
+         * ask the user to enter person information to be added
+         */
         var fname = read.question("enter the first name of person");
         var lname = read.question("enter the last name of the person");
         var city1 = read.question("enter the city of person");
         var state1 = read.question("enter state of the person");
         var zip = read.questionInt("enter the zip");
         var phonenum1 = read.questionInt("enter the phone number");
+        /** 
+         * create a person object and store it in var 
+         */
         var o = new Person(fname , lname, city1, state1, zip, phonenum1);
         data.Person.push(
             {
@@ -65,12 +78,20 @@ class AddressBook
                 zip : zip
             }
         )
+        /** 
+         * to write person data into s.json file
+         */
         var d = file.writeFileSync('s.json',JSON.stringify(data))
     }  
+    /** 
+     *  a function to update person information
+     */
     updatePerson(data)
     {
+        /** 
+         * ask the user which persons information he want to update
+         */
         var name = read.question("enter first name of the person");
-        
         for(let i = 0 ; i < data.Person.length; i++)
         {
             if(data.Person[i].personfname == name)
@@ -83,6 +104,9 @@ class AddressBook
                 console.log("enter 4 to update city ");
                 console.log("enter 5 to update state");
                 console.log("enter 6 to update zip");
+                /** 
+                 * ask the user to input the number
+                 */
                 var num1 = read.questionInt("choose any number");
                 while(num1 < 7){
                 switch(num1)
@@ -102,7 +126,7 @@ class AddressBook
                 }
             }var num1 = read.question("choose number in the given range");         
     }
-}
+        }
     }
     firstname(data , index)
     {
@@ -115,12 +139,9 @@ class AddressBook
         var fname1 = read.question("enter the new fname that has to be changed to")
         }
         var d =file.writeFileSync('AddressBook.json',JSON.stringify(data))
-        
-       
     }
     lastname(data , index)
     {
-        
         var lname1 = read.question("enter the new lname that has to be changed to")
         if(isNaN(lname1) && lname1.length > 0)  
         {
@@ -192,27 +213,10 @@ class AddressBook
         }}
         else{
             console.log("enter valid name to be removed");
-            
-            
         }
             var d = file.writeFileSync('AddressBook.json', JSON.stringify(data))
 
         }
-
-    
-  /**  sortfname(data){
-        let fname=data.Person;
-        function sortbyfname(a, b) {
-            if (a.personfname == b.personfname);
-            return 0
-            if (a.personfname > b.personfname);
-            return 1
-            if (a.personfname < b.personfname);
-            return -1
-        }
-        var result = fname.sort(sortbyfname);
-        console.log(result);
-    }*/
     sortfname(data)
     {
         let fname = data.Person;
