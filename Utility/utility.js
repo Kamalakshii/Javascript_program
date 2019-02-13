@@ -1059,27 +1059,20 @@ console.log("Enter valid Number");
                 /** 
                  * Initialize arr
                  */
-
                 var arr = [];
-
                 /** 
                  *for loop to read the array elements and store the result in arr
                  */
                 for (let i = 0; i < size; i++) {
                     arr[i] = readline.question("enter the array elements : ");
                 }
-
                 /** 
                  * To display array elements
                  */
-
-
                 var ch;
                 /** 
                  * for loop to loop until array  length and compares the current element with largest value
-                 
                  */
-
                 for (let i = 1; i < arr.length; i++) {
                     ch = arr[i];
                     var j = i - 1;
@@ -1091,9 +1084,7 @@ console.log("Enter valid Number");
                         arr[j + 1] = arr[j];
                         j = j - 1;
                     }
-
-                    arr[j + 1] = ch;
-
+                       arr[j + 1] = ch;
                 }
                 /** 
                  * To display the sorted array
@@ -1107,10 +1098,6 @@ console.log("Enter valid Number");
                 console.log(err);
             }
         },
-
-
-
-
 
         /*************************************Temperature Conversion***************************** */
         /** Purpose : To convert the temperature from celcius to fahrenheit and vice-versa.
@@ -1141,28 +1128,20 @@ console.log("Enter valid Number");
                      * display the temperature in celcius
                      */
                     console.log("The tempertaure in celcius is : " + celsius);
-
-
                 }
                 /**
                  * condition to check if user input choice2
                  */
                 else if (choice == 2) {
-
                     /** 
                      * Ask the user to input the temperature in celcius
                      */
                     temperature = readline.question("enter the temperature in celcius :");
-
-
                     var fahrenheit = temperature * (9 / 5) + 32;
-
                     /**
                      * display temperature in  fahrenheit
                      */
                     console.log("The temperature in fahrenheit is : " + fahrenheit);
-
-
                 }
                 /**
                  * Ask the user to input correct choice
@@ -1177,7 +1156,6 @@ console.log("Enter valid Number");
             catch (exception) {
                 console.log(err);
             }
-
         },
         /***********************************Monthly Payment************************************* */
         /** 
@@ -1189,16 +1167,11 @@ console.log("Enter valid Number");
             percent interest compounded monthly using the formulas.
          */
         monthlyPayment(principal, year, rate) {
-
-
             var n = 12 * year;
             var r = rate / (12 * 100);
             var payment = (principal * r) / (1 - Math.pow((1 + r), -n));
             console.log("Every month payment : " + payment);
-
-
         },
-
         /********************************BubbleSort(String)*********************************** */
 
         /*
@@ -1220,17 +1193,14 @@ console.log("Enter valid Number");
                     for (let i = 0; i < size; i++) {
                         arr[i] = readline.question("enter the array elements");
                     }
-
-                    /** 
+                   /** 
                      *  To display array elements
                      */
                     console.log("The array elements are : " + arr);
-
                     /** 
                      * find length of arr and store the result in n
                      */
                     var n = arr.length;
-
                     for (let i = 0; i < n; i++) {
                         for (j = i + 1; j < n; j++) {
                             /** 
@@ -1250,8 +1220,6 @@ console.log("Enter valid Number");
                      * To display the array elements
                      */
                     console.log("the sorted elements are : " + arr);
-
-
                 }
                 /**
                  * ask the user to enter valid input
@@ -1266,9 +1234,22 @@ console.log("Enter valid Number");
             catch (exception) {
                 console.log(err);
             }
-
         },
-        
+        /*********************************bubbleSort1******************************** */
+        bubbleSort(size)
+        {
+            for(let i = 0;i < size.length ;i++)
+            {
+                for(let j = i+1 ; j<size.length; j++)
+                {
+                    if(size[i] >size[j])
+                        var temp = size[i]
+                        size[i] = size[j]
+                        size[j]= temp;
+                }
+            }
+            console.log(size)
+        },
         /************************************Find Number**************************************** */
         /** Purpose : To find a number between a given values
          * @description :It takes a command-line argument N, asks you to think of a number
@@ -1284,9 +1265,7 @@ console.log("Enter valid Number");
                     var c;
                     c = readline.question("Is the number " + low + " If yes Press 'Y' Otherwise Press 'N' ");
                     if (c == 'Y')
-
-                        return low;
-
+                         return low;
                     if (c == 'N') {
                         return high;
                     }
@@ -1299,7 +1278,6 @@ console.log("Enter valid Number");
                     mid = this.findNumber(low, mid - 1, read);
 
                 }
-
             } return mid;
         },
 
@@ -1373,11 +1351,6 @@ console.log("Enter valid Number");
             return "Element not found";
         },
 
-
-
-
-
-
         /**********************************Binary Search for String*************************** */
         /** 
          * Purpose : to search a given number in an array.
@@ -1388,24 +1361,20 @@ console.log("Enter valid Number");
            Otherwise narrow it to the upper half. Repeatedly check until the value is found or
            the interval is empty.
         */
-
         binarySearchForString(array, element) {
             try {
                 /**
                  * sort the input array
                  */
                 array.sort();
-
                 /** 
                  * Initialize first
                  */
                 var first = 0;
-
                 /** 
                  * find the array length and store it in last
                  */
                 var last = array.length - 1;
-
                 /** 
                  * loop until first is less than or equal to last
                 */
@@ -1413,9 +1382,7 @@ console.log("Enter valid Number");
                     /** 
                      * calculate the value of mid
                      */
-
                     var mid = first + Math.floor((last - first) / 2);
-
                     /** 
                      * condition to check if element is present at middle itself
                      */
@@ -1426,14 +1393,9 @@ console.log("Enter valid Number");
                      * condition to check if the element is in the right or left of the array
                      */
                     else if (element.localeCompare(array[mid]))
-
                         first = mid + 1;
-
-
                     else
-
                         last = mid - 1;
-
                 }
                 return false;
             }
@@ -1477,9 +1439,7 @@ console.log("Enter valid Number");
                          * display the square root of an input
                          */
                         console.log("Square root of a number is :" + temp);
-
                     }
-
                 }
                 /**
                  * ask the user to give valid input
@@ -1495,14 +1455,6 @@ console.log("Enter valid Number");
                 console.log(err.message);
             }
         },
-        /*************************************MergeSort****************************************** */
-        /**Purpose : To merge sort a list of strings
-         * @description : MergeSort breaks down a list into several sub-lists until each sublist
-           consists of a single element and merging those sublists in a manner that results into 
-           sorted list.
-         * @function : 
-        */
-
 
         /*****************************Decimal to Binary**************************************** */
         /**
@@ -1574,18 +1526,15 @@ console.log("Enter valid Number");
              * to read the file
              */
             const fs = require('fs')
-
             /** 
              * if the word is found then returns the data otherwise an error
              */
             fs.readFile('sample.txt', (err, data) => {
                 if (err) throw err;
-
                 /**
                  * Split the string and store it in an array
                  */
                 array = data.toLocaleString().split(",");
-
                 /** 
                  * search the word using binary search
                  */
@@ -1608,7 +1557,6 @@ console.log("Enter valid Number");
                  * initialize notes
                  */
                 var notes = 0;
-
                 /** 
                  * loop till the length of array
                  */
@@ -1625,12 +1573,11 @@ console.log("Enter valid Number");
                         console.log(array[i] + " notes are :" + c);
                         amount = amount % array[i];
                     }
-
                     console.log("Total number of notes = :" + notes);
                 }
             }/**
-     *display an error message
-     */
+            *display an error message
+             */
             catch (exception) {
                 console.log(err.message);
             }
@@ -1670,7 +1617,6 @@ console.log("Enter valid Number");
                  * Print all the elements which are prime anagram,palindrome. 
                  * 
                  */
-
                 for (let i = 0; i < arr.length; i++) {
                     for (let j = i + 1; j < arr.length; j++) {
                         if (this.isAnagram(arr[i], arr[j])) {
@@ -1684,8 +1630,6 @@ console.log("Enter valid Number");
                         }
                     }
                 }
-
-
             } catch (error) {
                 console.log(error.message);
 
@@ -1703,32 +1647,24 @@ console.log("Enter valid Number");
              moves it to that position. 
          */
         insertionSortForString(size) {
-
             try {
                 /** 
                  * Initialize arr
                  */
-
                 var arr = [];
-
                 /** 
                  *for loop to read the array elements and store the result in arr
                  */
                 for (let i = 0; i < size; i++) {
                     arr[i] = readline.question("enter the array elements : ");
                 }
-
                 /** 
                  * To display array elements
                  */
-
-
                 var ch;
                 /** 
                  * for loop to loop until array  length and compares the current element with largest value
-                 
                  */
-
                 for (let i = 1; i < arr.length; i++) {
                     ch = arr[i];
                     var j = i - 1;
@@ -1740,9 +1676,7 @@ console.log("Enter valid Number");
                         arr[j + 1] = arr[j];
                         j = j - 1;
                     }
-
                     arr[j + 1] = ch;
-
                 }
                 /** 
                  * To display the sorted array
@@ -1765,8 +1699,6 @@ console.log("Enter valid Number");
                        The merge(arr, l, m, r) is key process that assumes that arr[l..m] and 
                        arr[m+1..r] are sorted and merges the two sorted sub-arrays into one. 
          */
-
-
         mergeSort(array) {
             if (array > 0) {
                 var n = array.length;
@@ -1786,9 +1718,7 @@ console.log("Enter valid Number");
                 this.mergeSort(left);
                 this.mergeSort(right);
                 this.merge(left, right, array);
-
             }
-
             else {
                 console.log("enter valid input");
             }
@@ -1849,7 +1779,6 @@ console.log("Enter valid Number");
          {
              result.push(firstcharacter + innerPermutation[j]);
          }
-         
      }return result;
     }catch(exception)
      {
@@ -1974,7 +1903,6 @@ fileRead()
     var f = fs.readFileSync('simple.txt','utf8');
     var arr = f.trim().split(' ');
     return arr;
-
 },
 /***********************************WriteIntoFile************************************************* */
 fileWrite(fileName,data)

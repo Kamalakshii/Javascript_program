@@ -1,0 +1,35 @@
+{
+    "Person": [
+        {
+            "personfname": "Joey",
+            "personlname": "Sharma",
+            "city": "Bangalore",
+            "state": "Karnataka",
+            "phonenumber": "11111"
+        },
+        {
+            "personfname": "Rachael",
+            "personlname": "Gupta",
+            "city": "Hyderabad",
+            "state": "Telangana",
+            "phonenumber": "22222",
+            "zip": "9731"
+        },
+        {
+            "personfname": "Phoebe",
+            "personlname": "Das",
+            "city": "Texas",
+            "state": "Dallas",
+            "phonenumber": "33333",
+            "zip": "4123"
+        },
+        {
+            "personfname": "kamalakshi",
+            "personlname": "swamy",
+            "phonenumber": "7349",
+            "city": "gulbarga",
+            "state": "karnataka",
+            "zip": "8000"
+        }
+    ]
+}

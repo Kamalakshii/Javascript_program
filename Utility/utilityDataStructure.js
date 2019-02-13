@@ -11,7 +11,7 @@
  *  @version        : 1.0.
  *  @since          : 01/02/2019
  ******************************************************************************/
-var utility = require("../Utility/utility");
+var utility = require("../Utility/utilityDataStructure");
 
 class Node {
     /**
@@ -164,7 +164,49 @@ class LinkedList {
         }
         return arr.length
     }
+    /**
+   * To remove the share from the stock
+   * @param {any} element 
+   */
+  removeStock(element) {
+    var temp = this.head;
+    var prev = null;
+    // iterate over the list
+    while (temp != null) {
+      // comparing element & if found then remove
+      var stock = temp.data;
+      if (stock.name == element) {
+        if (prev == null) {
+          this.head = temp.next;
+        } else {
+          prev.next = temp.next;
+        }
+        /**
+         * To decrement the size of the LinkedList
+         */
+        this.size--;
+        return temp.data;
+      }
+      prev = temp;
+      temp = temp.next;
+    }
+    return -1;
+  }
 
+      
+printShares() {
+    var arr = [];
+    if (this.head == null) {
+      return null;
+    } else {
+      var temp = this.head;
+      while (temp) {
+        arr.push(temp.data);
+        temp = temp.next;
+      }
+      return arr;
+    }
+}
 }
 /******************************************Stack**************************************** */
 /*************************************************************************************** */
@@ -226,6 +268,54 @@ class Stack {
         else
             return false
 
+    }
+    removeStock(element) {
+        var temp = this.top;
+        var prev = null;
+    
+        // iterate over the list
+        while (temp != null) {
+          // comparing element & if found then remove
+          var stock = temp.data;
+          if (stock.name == element || stock.symbol == element) {
+            if (prev == null) {
+              this.top = temp.next;
+            } else {
+              prev.next = temp.next;
+            }
+            /**
+             * To decrement the size of the LinkedList
+             */
+            this.size--;
+            return temp.data;
+          }
+          prev = temp;
+          temp = temp.next;
+        }
+        return -1;
+      }
+    
+    printShares(){
+        var arr = [];
+        if (this.top == null) {
+          return null;
+        } else {
+          var temp = this.top;
+          while (temp) {
+            arr.push(temp.data);
+            temp = temp.next;
+          }
+          return arr;
+        }
+      }
+      printList() {
+        var curr = this.top;
+        var str = "";
+        while (curr) {
+            str += curr.data + " ";
+            curr = curr.next;
+        }
+        return str;
     }
 }
 /***********************************Queue*********************************************** */
@@ -350,6 +440,7 @@ class StackLinkedList {
             return false;
         }
     }
+    
 
     /**
      * Return the topmost element without removing it from the stack.
@@ -392,6 +483,48 @@ class StackLinkedList {
         return string;
 
     }
+      /**
+   * To remove the share from the stock
+   * @param {any} element 
+   */
+  removeStock(element) {
+    var temp = this.head;
+    var prev = null;
+    // iterate over the list
+    while (temp != null) {
+      // comparing element & if found then remove
+      var stock = temp.data;
+      if (stock.name == element) {
+        if (prev == null) {
+          this.head = temp.next;
+        } else {
+          prev.next = temp.next;
+        }
+        /**
+         * To decrement the size of the LinkedList
+         */
+        this.size--;
+        return temp.data;
+      }
+      prev = temp;
+      temp = temp.next;
+    }
+    return -1;
+  }
+
+printShares() {
+    var arr = [];
+    if (this.top == null) {
+      return null;
+    } else {
+      var temp = this.top;
+      while (temp) {
+        arr.push(temp.data);
+        temp = temp.next;
+      }
+      return arr;
+    }
+}
 }
 
 /***************************************QueueLinked************************************* */
@@ -408,7 +541,6 @@ class LinkListQ {
         this.head = null;
 
     }
-
     enQueue(item) {
         let node = new QueNode(item);
         if (!this.head) {
@@ -461,8 +593,8 @@ class LinkListQ {
 
 module.exports = {
     LinkedList, Node, Stack, Queue, deQueue, StackLinkedList, QueNode, LinkListQ, SNode,
-    /***********************************BinaryTree********************************************* */
-    /*************************************************************************************** */
+    /***********************************BinaryTree**********************************************/
+    /****************************************************************************************/
     binaryTree(number) {
         try {
             if (number > 0 && !isNaN(number)) {
@@ -478,12 +610,11 @@ module.exports = {
         }
         catch (exception) {
             console.log(err);
-
         }
     },
 
-    /*****************************************day******************************************** */
-    /*************************************************************************************** */
+    /*****************************************day*********************************************/
+    /****************************************************************************************/
     day(m, d, y) {
         try {
             /**
@@ -502,8 +633,8 @@ module.exports = {
 
         }
     },
-    /****************************************month******************************************* */
-    /************************************************************************************** */
+    /****************************************month********************************************/
+    /***************************************************************************************/
     monthof(m) {
         try {
             switch (m) {
@@ -539,8 +670,8 @@ module.exports = {
 
         }
     },
-    /***********************************LeapYear********************************************* */
-    /************************************************************************************* */
+    /***********************************LeapYear**********************************************/
+    /**************************************************************************************/
     leapYear(year) {
         /** 
          * condition to check if the given year is leap or not
@@ -606,13 +737,11 @@ module.exports = {
                 }
             }
             console.log();
-
-
         }
         return arr2
     },
-    /*****************************************isPrime************************************* */
-    /************************************************************************************* */
+    /*****************************************isPrime**************************************/
+    /**************************************************************************************/
     isPrime(first, last) {
         /** 
          * Initialize flag, k, prime 
@@ -639,7 +768,7 @@ module.exports = {
         }
         return prime;
     },
-    /*********************************RangeOfPrime*************************************** */
+    /*********************************RangeOfPrime********************************************/
     rangeOfArray() {
         var arr = [];
         var arr2 = [];
@@ -688,8 +817,6 @@ module.exports = {
         }
         return arr2
     },
-
-
 }
 
 

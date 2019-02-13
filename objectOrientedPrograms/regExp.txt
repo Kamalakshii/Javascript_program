@@ -1,4 +1,4 @@
-Hello <<name>>, We have your fullname as <<full name>> in our system.
+Hello <<name>>, We have your fullname as <<fullName>> in our system.
 Your contact number is 91-<<xxxxxxxxxx>>
 Please,let us know in case of any clarification.
-Thank you BridgeLabz <<XX/XX/XXXX>>
+Thank you BridgeLabz <<xx-xx-xxxx>>

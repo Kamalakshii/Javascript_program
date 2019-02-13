@@ -18,11 +18,5 @@ var read = require('readline-sync');
 /** 
  * Accepting the user input
  */
-
 var size = read.question("Enter the size of an array");
-
-
-                
-
-
 access.insertionSort(size);
