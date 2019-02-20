@@ -17,10 +17,10 @@ class StockAccountLinked
      */
     stockCreate(data)
     {
+        try{
         var name1 = read.question("enter the name : ");
         var id1 = Math.floor(Math.random()*100);
         console.log(id1);
-        
         data.customer.push(
             {
             name : name1,
@@ -33,11 +33,17 @@ class StockAccountLinked
          */
         var d = file.writeFileSync('customer.json',JSON.stringify(data));
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     /** 
      * to buy the shares
      */
     buy(data,data1)
     {
+        try{
         console.log(data);
         /** 
          * creating an object of customer
@@ -96,11 +102,17 @@ class StockAccountLinked
             }
         } 
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     /** 
      * to sell the shares
      */
     sell(data , data1)
     {
+        try{
         console.log(data);
         var object = data.customer;
         var id1 = read.question("enter the id :");
@@ -154,21 +166,34 @@ class StockAccountLinked
             }
         }
     }
-  /** 
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
+   /** 
     * function to print the data
    */
     print(data , data1)
-    {
+    {   
+        try{
         console.log("customer shares information :");
         console.log(data);
         console.log("company shares information :");
         console.log(data1);    
     }
+    catch(exception)
+    {
+        console.log(err);
+        
+    }
+}
 }
 class CompanyShares
 {
     create(data)
-    {
+    {   
+        try{
         var name1 = read.question("enter name of the company");
         var share1 = read.question("enter the shares of the company");
         var price1 = read.question("enter price of each share")
@@ -186,8 +211,12 @@ class CompanyShares
             linkedlist.add(data.company[i]);
         }
         console.log(linkedlist);
-        
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     print(data)
     {
         console.log(data);

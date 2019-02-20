@@ -22,7 +22,6 @@ var object = JSON.parse(data)
 var object11 = JSON.parse(data1)
 var object1 = new D.StockAccountLinked
 console.log("Enter 1 to create account:")
-//console.log("Enter 2 to total value of amount in account")
 console.log("Enter 2 to buy shares")
 console.log("Enter 3 to sell shares")
 console.log("Enter 4 to information shares of company and customer")

@@ -1,4 +1,3 @@
-
 /******************************************************************************
  *  Execution       : Default node         cmd> node fileName.js                 
  *  Purpose         :To manage data inventory of rice, wheat and pulses
@@ -23,7 +22,6 @@ var fs = require("fs");
     Parse the data with JSON.parse(), and the data becomes a JavaScript object.
     */
   var object = JSON.parse(data); //JSON.parse() to convert text into a JavaScript object
-
 function inventoryDataManagement() {
   /** 
    * invoking inventory funtion to calculate the value of every object

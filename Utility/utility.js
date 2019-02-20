@@ -22,7 +22,6 @@ module.exports =
             *  @descriptipn: Declaring the function and passing the user input as argument.
             *  @function: display name takes the user input and print it with some sentence.
         */
-
         stringReplace(username) {
             try {
                 /*
@@ -132,7 +131,7 @@ module.exports =
                 */
 
 
-               if (year.length == 4 && !isNaN(year)) {
+                if (year.length == 4 && !isNaN(year)) {
                     if (year % 4 == 0 || year % 400 == 0 || year % 100 == 0) {
                         /** 
                          * Display a message as it is leap year
@@ -146,13 +145,13 @@ module.exports =
                         console.log("It is not a leap year");
                     }
                 }
-          else {
+                else {
                     /** 
                      * ask yhe user to enter valid input
                      */
-console.log("Enter valid Number");
-}
-           }
+                    console.log("Enter valid Number");
+                }
+            }
 
             /** 
              * Handles an exception
@@ -179,16 +178,12 @@ console.log("Enter valid Number");
         * @function: function checks the given number is less then 31, if less then 31, then it prints
         the value of two's power i.e., 2^N value.
         */
-        powerOfTwo(
-
-        ) {
+        powerOfTwo() {
             try {
                 /** 
                  * accepting commandline arguments
                  */
-
                 var pow = process.argv[2];
-
                 /** 
                   this condition is to check the value of power should be 0-31
                  */
@@ -198,14 +193,11 @@ console.log("Enter valid Number");
                     */
                     if (pow == 0) {
                         console.log(1);
-
                     }
-
                     /** 
                      finding the power using Math.pow() function
                      */
                     for (let i = 1; i <= pow; i++) {
-
                         console.log(Math.pow(2, i));
                     }
                 }
@@ -213,14 +205,10 @@ console.log("Enter valid Number");
                     console.log("enter a valid input");
                 }
             }
-
             catch (exception) {
                 console.log(err.message());
             }
         },
-
-
-
         /**********************************Harmonic Number********************************************* */
         /**
          * Purpose : Print the Nth Harmonic Value.
@@ -231,27 +219,22 @@ console.log("Enter valid Number");
          */
         harmonicNumber(number) {
             try {
-
                 /** 
                  * condition to check if number is greater than 0 and is a number
                  */
                 if (number > 0 && !isNaN(number)) {
-
                     /**  
                     *Initialise sum
                     */
                     var sum = 0;
-
                     /** 
                      * for loop to compute the nth harmonic number 
                      */
                     for (var i = 1; i <= number; i++) {
                         sum = sum + (1 / i);
-
                     }
                     console.log(sum);
                 }
-
                 /** 
                  * tell user to enter valid number
                  */
@@ -259,7 +242,6 @@ console.log("Enter valid Number");
                     console.log("Please enter a number and it should be greater than zero");
                 }
             }
-
             /** 
              * otherwise display an error message
              */
@@ -267,7 +249,6 @@ console.log("Enter valid Number");
                 console.log(err.message());
             }
         },
-
         /***********************************Factor******************************************** */
         /** 
          * Purpose : To compute the prime factors of a given number.
@@ -396,11 +377,10 @@ console.log("Enter valid Number");
 
         },
         /**********************************Coupon Numbers************************************* */
-        /** 
-         * 8. Coupon Number
+        /**
         * @purpose : Given N distinct Coupon Numbers, how many random numbers do you 
-        *  need to generate distinct coupon number? This program simulates this random 
-        * process.
+        *            need to generate distinct coupon number. This program simulates this 
+                     random process.
         * @description : Total random number needed to have all distinct numbers. 
         */
         couponNumberGenerate(number) {
@@ -411,18 +391,15 @@ console.log("Enter valid Number");
                 */
                 var arr = [];
                 var count = 0;
-
                 /** 
                  * condition to check if count is not equal to number
                 */
                 while (count != number) {
-
                     /** 
                      * the input variable stores the random number multiplied by the input number
                      */
                     var input = (Math.round(Math.random() * number));
                     console.log(input);
-
                     /** 
                      * to check whether a random number is a new one if new push into array 
                      * and increment count
@@ -434,7 +411,6 @@ console.log("Enter valid Number");
                 }
                 console.log(arr);
             }
-
             /** 
              * Handling the Exception
              */
@@ -443,8 +419,9 @@ console.log("Enter valid Number");
             }
         },
 
-        /** ********************************** Calculate Distance************************************/
-        /**Purpose :To calculate the Euclidean distance from the point (x, y) to the 
+        /************************************ Calculate Distance************************************/
+        /**
+         * Purpose :To calculate the Euclidean distance from the point (x, y) to the 
          origin (0, 0).
          *@description : It takes two commandline  to calculate the distance.
          *@function :The formulae to calculate distance = sqrt(x*x + y*y)and uses
@@ -469,8 +446,6 @@ console.log("Enter valid Number");
                 console.log(err.message);
             }
         },
-
-
         /************************************WindChill****************************************** */
         /**Purpose : To calculate the windchill.
          * @description :It takes two double command-line arguments t
@@ -480,19 +455,15 @@ console.log("Enter valid Number");
          the wind speed v (in miles per hour),the effective temperature is found using the formula.
          */
         windChill() {
-
             /** 
              * Accepting command line arguments t and v
              */
             var t = process.argv[2];
             var v = process.argv[3];
-
-
             /** 
              * checks whether the absolute value of t is less than 50 and the value of v is in 3-120
              */
             if (Math.abs(t) < 50 && (v < 120 && v > 3)) {
-
                 /** 
                  * w stores the value of effective temperature
                  */
@@ -501,7 +472,6 @@ console.log("Enter valid Number");
                 console.log("windSpeed= :" + v);
                 console.log("Effective temperature=" + w);
             }
-
             /** 
              * otherwise display an error message
              */
@@ -517,10 +487,8 @@ console.log("Enter valid Number");
          * using the formula.Take a,b,c as inputs and find the roots of x
          */
         quadraticRoots(a, b, c) {
-
             var x = b * b - 4 * a * c;
             if (!isNaN(x)) {
-
                 /** 
                  * if the roots are equal
                  */
@@ -528,7 +496,6 @@ console.log("Enter valid Number");
                     root1 = root2 = -b / (2 * a);
                     console.log("Root1 = Root2 = :" + root1);
                 }
-
                 /** 
                  * if the roots are real and distinct
                  */
@@ -537,14 +504,12 @@ console.log("Enter valid Number");
                     var root2 = (-b - (Math.sqrt(x))) / 2 * a;
                     console.log("Root1 is : " + root1);
                     console.log("Root2 is : " + root2);
-
                 }
                 else {
                     var realPart = -b / (2 * a);
                     var imagPart = Math.sqrt(-x) / (2 * a);
                     console.log("Real Part is :" + realPart);
                     console.log("Imaginary part is :" + imagPart);
-
                 }
             }
             else {
@@ -561,9 +526,7 @@ console.log("Enter valid Number");
          * function stopwatch() ,the start variable stores the retrieved second at starttime,
          * and the stop variable stores the retrieved second at stop time
          */
-
         getCurrentSecond() {
-
             /** 
              * Create a date object
              */
@@ -572,10 +535,8 @@ console.log("Enter valid Number");
              * invoking getSeconds() on date object and storing it in seconds
              */
             seconds = dt.getSeconds();
-
             return seconds;
         },
-
         /** 
          * Function stopWatch
          */
@@ -584,12 +545,10 @@ console.log("Enter valid Number");
              * invoke getCurrentSecond() to get current second and store in start variable
              */
             var start = this.getCurrentSecond();
-
             /**
              *  invoke getCurrentSecond() to get current second and store it in stopvariable
              */
             var stop = this.getCurrentSecond();
-
             /** 
              * To find elapsed time subtract stop from start
              */
@@ -602,55 +561,42 @@ console.log("Enter valid Number");
          * @function : The function returns a true if the array contains a triplets whose sum is zero or return false.
          */
         triplet(size) {
-
-
             try {
                 if (size != 0) {
                     /** Initialise found
                      * Initialize count
                      * Initialize a
                      */
-
                     var found = false;
                     var count = 0;
                     var a = [];
-
                     /** 
                      * To read array elements
                      */
                     for (var i = 0; i < size; i++) {
                         a[i] = readline.question("enter the elements : ");
                     }
-
                     /**
                      *  To display array elements
                      */
                     console.log("The array elements are :" + a)
-
                     /**
                      * for loop to find the triplets whose sum is zero 
                      */
                     for (let i = 0; i < a.length - 2; i++) {
                         for (let j = i + 1; j < a.length - 1; j++) {
-
                             for (let k = j + 1; k < a.length; k++) {
-
-
                                 /** 
                                  * condition to check their sum is zero ,if yes display those elements
                                  */
                                 if (Number(a[i]) + Number(a[j]) + Number(a[k]) === 0) {
-
                                     console.log("The triplets whose sum is 0 are : " + a[i] + "," + a[j] + "," + a[k]);
                                     count++;
                                     found = true;
                                 }
-
                             }
                         }
                     }
-
-
                     /**
                      *  condition to check if triplets are not found then display a message
                      */
@@ -662,17 +608,12 @@ console.log("Enter valid Number");
                     console.log("enter a valid input");
                 }
             }
-
-
             /** 
              * Display an error message
              */
             catch (exception) {
                 console.log(err);
             }
-
-
-
         },
         /*************************************2D Array******************************************/
         /** Purpose : Create 2 dimensional array in memory to read in M rows and N cols.
@@ -683,12 +624,10 @@ console.log("Enter valid Number");
         array2D(row, col, read) {
             try {
                 if (!isNaN(row, col, read)) {
-
                     /**
                      * Initialize arr
                      */
                     var arr = [];
-
                     /** 
                      * for loop to read m rows and n columns
                      */
@@ -706,7 +645,6 @@ console.log("Enter valid Number");
                             arr[i][j] = element;
                         }
                     }
-
                     /** 
                      * To display the array elements
                      */
@@ -715,7 +653,6 @@ console.log("Enter valid Number");
                     console.log("enter a valid input");
                 }
             }
-
             /**
              * To display an error message
              */
@@ -733,7 +670,7 @@ console.log("Enter valid Number");
                     rearrangement of the first.
         */
         isAnagram(string1, string2) {
-           try {
+            try {
                 var valid = false;
                 /**
                 * Validation to accept only numbers.
@@ -865,15 +802,15 @@ console.log("Enter valid Number");
                 /**
                  * Validation to accept only numbers.
                   */
-              /**   do {
-                var number = readline.question("Enter the value in digit: ");
-                    if (isNaN(number)) {
-                        console.log("Not a valid entry.");
-                    }
-                    else {
-                        valid = true;
-                    }
-                } while (!valid);*/
+                /**   do {
+                  var number = readline.question("Enter the value in digit: ");
+                      if (isNaN(number)) {
+                          console.log("Not a valid entry.");
+                      }
+                      else {
+                          valid = true;
+                      }
+                  } while (!valid);*/
 
                 /**
                  *  condition to check if number is not null and is a number 
@@ -929,7 +866,7 @@ console.log("Enter valid Number");
                 num = 0;
                 //Empty array.
                 arr = [];
-    
+
                 for (i = 1; i <= 1000; i++) {
                     count = 0;
                     /**
@@ -970,8 +907,8 @@ console.log("Enter valid Number");
                 return true;
             } catch (exception) {
                 console.log(err.message);
-             }
-    
+            }
+
         },
         /**************************************BubbleSort*************************************** */
         /** 
@@ -1084,7 +1021,7 @@ console.log("Enter valid Number");
                         arr[j + 1] = arr[j];
                         j = j - 1;
                     }
-                       arr[j + 1] = ch;
+                    arr[j + 1] = ch;
                 }
                 /** 
                  * To display the sorted array
@@ -1118,7 +1055,6 @@ console.log("Enter valid Number");
                  * condition to check if user enters choice1
                  */
                 if (choice == 1) {
-
                     /** 
                      * Ask the user to input temperature in fahrenheit
                      */
@@ -1193,9 +1129,9 @@ console.log("Enter valid Number");
                     for (let i = 0; i < size; i++) {
                         arr[i] = readline.question("enter the array elements");
                     }
-                   /** 
-                     *  To display array elements
-                     */
+                    /** 
+                      *  To display array elements
+                      */
                     console.log("The array elements are : " + arr);
                     /** 
                      * find length of arr and store the result in n
@@ -1236,16 +1172,13 @@ console.log("Enter valid Number");
             }
         },
         /*********************************bubbleSort1******************************** */
-        bubbleSort(size)
-        {
-            for(let i = 0;i < size.length ;i++)
-            {
-                for(let j = i+1 ; j<size.length; j++)
-                {
-                    if(size[i] >size[j])
+        bubbleSort(size) {
+            for (let i = 0; i < size.length; i++) {
+                for (let j = i + 1; j < size.length; j++) {
+                    if (size[i] > size[j])
                         var temp = size[i]
-                        size[i] = size[j]
-                        size[j]= temp;
+                    size[i] = size[j]
+                    size[j] = temp;
                 }
             }
             console.log(size)
@@ -1265,7 +1198,7 @@ console.log("Enter valid Number");
                     var c;
                     c = readline.question("Is the number " + low + " If yes Press 'Y' Otherwise Press 'N' ");
                     if (c == 'Y')
-                         return low;
+                        return low;
                     if (c == 'N') {
                         return high;
                     }
@@ -1280,7 +1213,6 @@ console.log("Enter valid Number");
                 }
             } return mid;
         },
-
         /***********************************Day Of Week****************************************** */
         /** Purpose : To print the day of the week that date falls on.
          * @description :prints the day of the week that date falls on by taking three
@@ -1557,7 +1489,7 @@ console.log("Enter valid Number");
                  * initialize notes
                  */
                 var notes = 0;
-                /** 
+                /**
                  * loop till the length of array
                  */
                 for (let i = 0; i < array.length; i++) {
@@ -1750,168 +1682,139 @@ console.log("Enter valid Number");
             }
             return crr;
         },
-    
 
-/***********************************StringPermutation******************************** */
-/** 
- * Purpose :to return all permutation of a String
- * @description : To get all the permutations, we will first take out the first char 
-                 from String and permute the remaining chars.If String = “ABC”
- *@function : First char = A and remaining chars permutations are BC and CB.
-    Now we can insert first char in the available positions in the permutations
- */
- stringPermutation(string)
- {  
-     try
-    {
-        var result = [];
-     if(string.length === 1)
-     {
-         result.push(string);
-         return result;
-     }
-     for(var i = 0;i < string.length; i++)
-     {
-         var firstcharacter = string[i];
-         var charleft = string.substring(0,i) + string.substring(i+1);
-         var innerPermutation = this.stringPermutation(charleft);
-         for( var j =0 ; j< innerPermutation.length;j++)
-         {
-             result.push(firstcharacter + innerPermutation[j]);
-         }
-     }return result;
-    }catch(exception)
-     {
-         console.log(err.message);
-     }
- },
- /*************************************TicTacToe**************************************** */
-/**Purpose : Program to play a cross game where the player1 is the computer and the player2 takes 
- *           is the user.Player1 take the random cell that is the row and column.
- * 
- * 
- */
-intializeGame() 
-    {
-        var game = [];
-        for (let i = 0; i <= 2; i++) 
-        {
-            game.push([]);
-            for (let j = 0; j <= 2; j++)
-                game[i][j] = '-';
-        }
-        return game;
-    },
-    
-    random() 
-    {
-        var value = Math.floor(Math.random() * 3);
-        console.log(value+1);
-        return value;
-    },
-    
-    mark(game, x, y, value) 
-    {
-        if (game[x][y] == '-')
-            game[x][y] = value;
-        for (let i = 0; i <= 2; i++) 
-        {
-            var print = [];
-            for (let j = 0; j <= 2; j++)
-                print[j] = game[i][j];
-            console.log(print);
-        }
-        return game;
-    }
-    ,
-    computerPlayer(game) 
-    {
-        var arr;
-        var flag = false;
-        while (flag == false) 
-        {
-            var x = this.random();
-            var y = this.random();
-            if (game[x][y] == '-') 
-            {
-                arr = this.mark(game, x, y, 'O');
-                flag = true;
+
+        /***********************************StringPermutation******************************** */
+        /** 
+         * Purpose :to return all permutation of a String
+         * @description : To get all the permutations, we will first take out the first char 
+                         from String and permute the remaining chars.If String = “ABC”
+         *@function : First char = A and remaining chars permutations are BC and CB.
+            Now we can insert first char in the available positions in the permutations
+         */
+        stringPermutation(string) {
+            try {
+                var result = [];
+                if (string.length === 1) {
+                    result.push(string);
+                    return result;
+                }
+                for (var i = 0; i < string.length; i++) {
+                    var firstcharacter = string[i];
+                    var charleft = string.substring(0, i) + string.substring(i + 1);
+                    var innerPermutation = this.stringPermutation(charleft);
+                    for (var j = 0; j < innerPermutation.length; j++) {
+                        result.push(firstcharacter + innerPermutation[j]);
+                    }
+                } return result;
+            } catch (exception) {
+                console.log(err.message);
             }
-        }
-        return game;
-    }
-    ,
-    userPlayer(game) 
-    {
-        var flag = false;
-        while (flag == false) 
-        {
-            console.log("Enter the row value:");
-            let x = readline.questionInt('Enter the value of x within 1,2,3 : ')-1;
-            let y = readline.questionInt('Enter the value of y within 1,2,3 : ')-1;
-            if (game[x][y] == '-') 
-            {
-                this.mark(game, x, y, 'X');
-                flag = true;
+        },
+        /*************************************TicTacToe**************************************** */
+        /**Purpose : Program to play a cross game where the player1 is the computer and the player2 takes 
+         *           is the user.Player1 take the random cell that is the row and column.
+         * 
+         * 
+         */
+        intializeGame() {
+            var game = [];
+            for (let i = 0; i <= 2; i++) {
+                game.push([]);
+                for (let j = 0; j <= 2; j++)
+                    game[i][j] = '-';
             }
-            else
-                console.log("Please enter the correct choice");
+            return game;
+        },
+
+        random() {
+            var value = Math.floor(Math.random() * 3);
+            console.log(value + 1);
+            return value;
+        },
+
+        mark(game, x, y, value) {
+            if (game[x][y] == '-')
+                game[x][y] = value;
+            for (let i = 0; i <= 2; i++) {
+                var print = [];
+                for (let j = 0; j <= 2; j++)
+                    print[j] = game[i][j];
+                console.log(print);
+            }
+            return game;
         }
-        return game;
-    }
-    ,
-    check(game) 
-    {
-        for (let i = 0; i <= 2; i++) 
-        {
-            if (game[i][0] == game[i][1] && game[i][1] == game[i][2]) 
-            {
-                if (game[i][0] == 'O' || game[i][0] == 'X') 
-                {
+        ,
+        computerPlayer(game) {
+            var arr;
+            var flag = false;
+            while (flag == false) {
+                var x = this.random();
+                var y = this.random();
+                if (game[x][y] == '-') {
+                    arr = this.mark(game, x, y, 'O');
+                    flag = true;
+                }
+            }
+            return game;
+        }
+        ,
+        userPlayer(game) {
+            var flag = false;
+            while (flag == false) {
+                console.log("Enter the row value:");
+                let x = readline.questionInt('Enter the value of x within 1,2,3 : ') - 1;
+                let y = readline.questionInt('Enter the value of y within 1,2,3 : ') - 1;
+                if (game[x][y] == '-') {
+                    this.mark(game, x, y, 'X');
+                    flag = true;
+                }
+                else
+                    console.log("Please enter the correct choice");
+            }
+            return game;
+        }
+        ,
+        check(game) {
+            for (let i = 0; i <= 2; i++) {
+                if (game[i][0] == game[i][1] && game[i][1] == game[i][2]) {
+                    if (game[i][0] == 'O' || game[i][0] == 'X') {
+                        return true;
+                    }
+                }
+                if (game[0][i] == game[1][i] && game[1][i] == game[2][i]) {
+                    if (game[0][i] == 'O' || game[0][i] == 'X') {
+                        return true;
+                    }
+                }
+            }
+            var k = 0, l = 0;
+            if (game[k][k] == game[k + 1][k + 1] && game[k + 1][k + 1] == game[k + 2][k + 2]) {
+                if (game[0][0] == 'O' || game[0][0] == 'X') {
                     return true;
                 }
             }
-            if (game[0][i] == game[1][i] && game[1][i] == game[2][i]) 
-            {
-                if (game[0][i] == 'O' || game[0][i] == 'X') 
-                {
+            if (game[l][l + 2] == game[l + 1][l + 1] && game[l + 1][l + 1] == game[l + 2][l]) {
+                if (game[0][0] == 'O' || game[0][0] == 'X') {
                     return true;
                 }
             }
+            return false;
+        },
+        /***********************************ReadIntoFile******************************************* */
+        fileRead() {
+            var fs = require('fs');
+            var f = fs.readFileSync('simple.txt', 'utf8');
+            var arr = f.trim().split(' ');
+            return arr;
+        },
+        /***********************************WriteIntoFile************************************************* */
+        fileWrite(fileName, data) {
+            var fs = require('fs');
+            fs.writeFile(fileName, data, function (err) {
+                if (err) {
+                    return console.log(err);
+                }
+            });
         }
-        var k = 0, l = 0;
-        if (game[k][k] == game[k + 1][k + 1] && game[k + 1][k + 1] == game[k + 2][k + 2]) 
-        {
-            if (game[0][0] == 'O' || game[0][0] == 'X') 
-            {
-                return true;
-            }
-        }
-        if (game[l][l + 2] == game[l + 1][l + 1] && game[l + 1][l + 1] == game[l + 2][l]) 
-        {
-            if (game[0][0] == 'O' || game[0][0] == 'X')
-            {
-                return true;
-            }
-        }
-        return false;
-    },
-/***********************************ReadIntoFile******************************************* */
-fileRead()
-{
-    var fs = require('fs');
-    var f = fs.readFileSync('simple.txt','utf8');
-    var arr = f.trim().split(' ');
-    return arr;
-},
-/***********************************WriteIntoFile************************************************* */
-fileWrite(fileName,data)
-{
-    var fs = require('fs');
-    fs.writeFile(fileName,data,function (err){
-        if(err){
-            return console.log(err);
-        }
-    });
-}
-}
+    }

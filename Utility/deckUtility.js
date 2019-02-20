@@ -1,7 +1,8 @@
 
 module.exports = {
     deckOfCards()
-    {
+    {   
+        try{
         /** 
          * initialize suit and rank
          */
@@ -49,5 +50,10 @@ module.exports = {
         }
         return cards
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
 }
     

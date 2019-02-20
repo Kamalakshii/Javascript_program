@@ -15,6 +15,7 @@ class InventoryManager
      */
     add(data)
     {
+        try{
         var name =read.question("enter name of the stock");
         var price = read.question("enter the price of the stock");
         var shares = read.question("enter the shares");
@@ -25,11 +26,17 @@ class InventoryManager
         })
         var d = file.writeFileSync('Stock.json', JSON.stringify(data))
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     /** 
      * to remove data from the file
      */
     remove(data)
     {
+        try{
         var name = read.question("enter the name to be removed");
         for(let i =0 ; i<data.Stock.length; i++)
         {
@@ -41,6 +48,11 @@ class InventoryManager
             var d = file.writeFileSync('Stock.json', JSON.stringify(data))
         }
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     /** 
      * to print the data
      */

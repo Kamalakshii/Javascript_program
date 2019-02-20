@@ -1,10 +1,10 @@
-
 module.exports = {
     /** 
      * creating an inventory object
      */
     inventory(object)
-    {
+    {   
+        try{
         /** 
          * creating an object of rice wheat and pulses
          */
@@ -42,4 +42,9 @@ module.exports = {
             console.log("The total amount for pulses is :"+pulses[key].price*pulses[key].weight);
         }
     }
+    catch(exception)
+    {
+        console.log(err);       
+    }
+}
 }

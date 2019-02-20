@@ -36,6 +36,7 @@ class companyShares {
      * using linkedlist and add it to list. 
      */
     addTolist() {
+        try{
         var flag = false;
         do {
             var name = read.question("Enter the name want to add : ");
@@ -55,15 +56,26 @@ class companyShares {
         console.log("Elemets after adding to list :");
         console.log(this.stock.printShares());
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     /**
      * removeFromList to remove the info about the company name,share and price
      * using linkedlist and add it to list. 
      */
     removeFromList() {
+        try{
         console.log(this.stock.printShares());
         var company = read.question("Enter company name to be removed: ");
         this.stock.removeStock(company);
         console.log(this.stock.printShares());
+        }
+        catch(exception)
+        {
+            
+        }
     }
     /**
      * To print all the details of the company using printlist method.

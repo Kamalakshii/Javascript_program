@@ -1,6 +1,7 @@
 module.exports = {
     regexp(name,fullName,contactNumber,date)
     {
+        try{
         /** 
          * to read data from the file
          */
@@ -19,4 +20,9 @@ module.exports = {
         console.log();
         console.log(data);
     }
+    catch(exception)
+        {
+            console.log(err);
+        }
+}
 }

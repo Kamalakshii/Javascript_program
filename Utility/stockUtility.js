@@ -6,9 +6,10 @@ stockReport()
      */
 var utility = require('../objectOrientedPrograms/stock1')
 var read = require("readline-sync");
-var number = read.question("enter the number of stocks");
+var number = read.questionInt("enter the number of stocks");
 var valueOfStock =0;
 var totalValue = 0;
+try{
 for(let i = 1; i<=number ; i++)
 {
     /** 
@@ -43,6 +44,11 @@ console.log("The shareholder "+name+ "with "+shares+ "shares have total of "+val
 totalValue = totalValue + valueOfStock;
 }
 console.log(totalValue);
+}
+catch(exception)
+{
+    console.log(err); 
+}
 }
 }
 

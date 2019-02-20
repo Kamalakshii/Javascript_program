@@ -1,4 +1,3 @@
-
 /** 
  *to access data from utility file 
  */
@@ -16,14 +15,16 @@ class StockAccount
      */
     stockCreate(data)
     {
+        try{
         var name1 = read.question("enter the name : ");
+        var share1 = read.question("enter the share :")
         var id1 = Math.floor(Math.random()*100);
         console.log(id1);
-        
         data.customer.push(
             {
             name : name1,
-            id : id1
+            id : id1,
+            share : share1
             } 
         )
        console.log(data.customer);
@@ -32,11 +33,17 @@ class StockAccount
          */
         var d = file.writeFileSync('customer.json',JSON.stringify(data));
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     /** 
      * function to buy the shares
      */
     buy(data,data1)
     {
+        try{
         console.log(data);
         /** 
          * creating an object of customer
@@ -95,11 +102,17 @@ class StockAccount
             }
         } 
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
     /** 
      * to sell the shares
      */
     sell(data , data1)
     {
+        try{
         console.log(data);
         var object = data.customer;
         var id1 = read.question("enter the id :");
@@ -152,15 +165,26 @@ class StockAccount
             }
         }
     }
+    catch(exception)
+    {
+        console.log(err);
+    }
+}
    /** 
     * function to print the data
    */
     print(data , data1)
-    {
+    {   
+        try{
         console.log("customer shares information :");
         console.log(data);
         console.log("company shares information :");
         console.log(data1);    
+    }
+    catch(exception)
+    {
+        console.log(err);    
+    }
     }
 }
 module.exports = { StockAccount }

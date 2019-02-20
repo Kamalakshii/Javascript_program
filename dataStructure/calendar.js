@@ -64,7 +64,6 @@ function calendar() {
     for (var i = 0; i < (day * 5); i++) {
         T.print(" ");
     }
-
     for (var i = 1; i <= dates[month]; i++) {
         if (i < 10) {
             T.print(" " + i + "   ");
